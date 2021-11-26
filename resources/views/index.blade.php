@@ -15,7 +15,7 @@
         <h1>Skate Spots</h1>
         <div id="map" style="height:500px"></div>
         <script src="/js/result.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAnHN6ouyb3SPb0qRI8zFsKXBRflvr2Fzs&callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyDOB9TUcouAY31C_oOTHjuQAmcpddXf_To&callback=initMap" async defer></script>
         <p class='create'>[<a href='/posts/create'>create</a>]</p>
         <div class='posts'>
             @foreach ($posts as $post)
