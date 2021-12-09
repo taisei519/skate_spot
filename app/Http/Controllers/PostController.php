@@ -47,5 +47,18 @@ class PostController extends Controller
         $post->delete();
         return redirect('/');
     }
+    
+    public function currentLocation(Request $request)
+    {
+        $lat = $request->lat;
+        $lng = $request->lng;
+        // currentLocationで表示
+        return view('currentLocation', [
+            // 現在地緯度latをbladeへ渡す
+            'lat' => $lat,
+            // 現在地経度lngをbladeへ渡す
+            'lng' => $lng,
+        ]);
+    }
 
 }

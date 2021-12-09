@@ -4,7 +4,7 @@ function initMap() {
   const tokyoTower = {lat: 35.6585769, lng: 139.7454506};
   // The map, centered at tokyoTower
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
+    zoom: 10,
     center: tokyoTower,
   });
   // The marker, positioned at tokyoTower
@@ -13,4 +13,3 @@ function initMap() {
     map: map,
   });
 }
-
