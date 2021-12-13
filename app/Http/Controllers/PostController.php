@@ -48,7 +48,7 @@ class PostController extends Controller
         return redirect('/');
     }
     
-    public function currentLocation(Request $request)
+    public function currentLocation(Request $request, Post $post)
     {
         $lat = $request->lat;
         $lng = $request->lng;
@@ -58,6 +58,8 @@ class PostController extends Controller
             'lat' => $lat,
             // 現在地経度lngをbladeへ渡す
             'lng' => $lng,
+            
+            'posts' => $post->get()
         ]);
     }
 

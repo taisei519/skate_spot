@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -14,16 +17,17 @@
         <h1>Skate Spots</h1>
         <form action="/posts" method="POST">
             {{ @csrf_field() }}
+            </div>
             <div class="title">
-                <h2>Title</h2>
-                <input type="text" name="post[title]" placeholder="タイトル"/>
+                <h2>場所名</h2>
+                <input type="text" name="post[title]" placeholder="◯◯公園"/>
             </div>
             <div class="type">
-                <h2>Type</h2>
-                <input type="text" name="post[type]" placeholder="種類"/>
+                <h2>種類</h2>
+                <input type="text" name="post[type]" placeholder="レール、ボックス"/>
             </div>
             <div class="body">
-                <h2>Body</h2>
+                <h2>詳細</h2>
                 <textarea name="post[body]" placeholder="路面が綺麗で滑りやすい。"></textarea>
             </div>
             <input type="submit" value="保存"/>
@@ -31,3 +35,4 @@
         <div class='back'>[<a href='/'>back</a>]</div>
     </body>
 </html>
+@endsection
